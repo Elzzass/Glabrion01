@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import org.koin.android.ext.android.inject
 import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.common.toast
@@ -22,7 +23,16 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
         generalPresenter.attach(this)
 
         val view = inflater.inflate(R.layout.fragment_general, container, false)
+        val btn = view.findViewById<View>(R.id.act2_button) as Button
 
+        btn.setOnClickListener {
+            val fragment = SecondFragment()
+            val fragmentManager = activity!!.supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.main_fragment_container, fragment)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
         return view
     }
 
