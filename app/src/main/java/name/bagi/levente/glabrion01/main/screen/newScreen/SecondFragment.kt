@@ -1,4 +1,4 @@
-package name.bagi.levente.glabrion01.main.screen.general
+package name.bagi.levente.glabrion01.main.screen.newScreen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.base.view.BaseFragment
+import name.bagi.levente.glabrion01.main.screen.general.GeneralContractInterface
 import org.koin.android.ext.android.inject
 
-class SecondFragment : BaseFragment(), GeneralContractInterface.View {
+class SecondFragment : BaseFragment(),
+    GeneralContractInterface.View {
     private val generalPresenter: GeneralContractInterface.Presenter by inject()
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -9,6 +9,7 @@ import org.koin.android.ext.android.inject
 import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.common.toast
 import name.bagi.levente.glabrion01.base.view.BaseFragment
+import name.bagi.levente.glabrion01.main.screen.newScreen.SecondFragment
 
 class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
 
