@@ -9,6 +9,7 @@ import org.koin.android.ext.android.inject
 import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.common.toast
 import name.bagi.levente.glabrion01.base.view.BaseFragment
+import name.bagi.levente.glabrion01.main.MainActivity
 import name.bagi.levente.glabrion01.main.screen.newScreen.SecondFragment
 
 class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
@@ -25,15 +26,7 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
 
         val view = inflater.inflate(R.layout.fragment_general, container, false)
         val btn = view.findViewById<View>(R.id.open_new_fragment) as Button
-
-        btn.setOnClickListener {
-            val fragment = SecondFragment()
-            val fragmentManager = activity?.supportFragmentManager
-            val fragmentTransaction = fragmentManager?.beginTransaction()
-            fragmentTransaction?.replace(R.id.main_fragment_container, fragment)
-            fragmentTransaction?.addToBackStack(null)
-            fragmentTransaction?.commit()
-        }
+        (activity as? MainActivity)?.openCleanScreen(btn)
         return view
     }
 
