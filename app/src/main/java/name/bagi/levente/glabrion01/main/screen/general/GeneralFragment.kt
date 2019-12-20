@@ -28,11 +28,11 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
 
         btn.setOnClickListener {
             val fragment = SecondFragment()
-            val fragmentManager = activity!!.supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.main_fragment_container, fragment)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
+            val fragmentManager = activity?.supportFragmentManager
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.main_fragment_container, fragment)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
         }
         return view
     }
