@@ -24,7 +24,7 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
         generalPresenter.attach(this)
 
         val view = inflater.inflate(R.layout.fragment_general, container, false)
-        val btn = view.findViewById<View>(R.id.act2_button) as Button
+        val btn = view.findViewById<View>(R.id.open_new_fragment) as Button
 
         btn.setOnClickListener {
             val fragment = SecondFragment()

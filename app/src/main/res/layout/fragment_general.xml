@@ -10,7 +10,7 @@
         android:layout_marginTop="@dimen/margin_top"
         android:text="@string/app_name"/>
     <Button
-        android:id="@+id/act2_button"
+        android:id="@+id/open_new_fragment"
         android:layout_gravity="bottom|center"
         android:text="Open second fragment"
         android:layout_width="wrap_content"
