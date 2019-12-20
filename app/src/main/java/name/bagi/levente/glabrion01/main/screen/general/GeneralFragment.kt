@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import kotlinx.android.synthetic.main.fragment_general.*
+import kotlinx.android.synthetic.main.fragment_general.view.*
 import org.koin.android.ext.android.inject
 import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.common.toast
@@ -25,7 +27,7 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
         generalPresenter.attach(this)
 
         val view = inflater.inflate(R.layout.fragment_general, container, false)
-        val btn = view.findViewById<View>(R.id.open_new_fragment) as Button
+        val btn = view?.open_new_fragment as Button
         (activity as? MainActivity)?.openCleanScreen(btn)
         return view
     }
