@@ -24,16 +24,16 @@ class MainActivity : BaseActivity(), ProgressManager {
             generalFragment
         ).commit()
     }
-    fun openCleanScreen(btn: Button) {
-        btn.setOnClickListener {
-            val fragment = SecondFragment()
-            val fragmentManager = supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.main_fragment_container, fragment)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
-        }
+
+    fun openCleanScreen() {
+        val fragment = SecondFragment()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.main_fragment_container, fragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
     }
+
     override fun showProgress() {
         main_progress.visible()
     }

@@ -27,8 +27,9 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
         generalPresenter.attach(this)
 
         val view = inflater.inflate(R.layout.fragment_general, container, false)
-        val btn = view?.open_new_fragment as Button
-        (activity as? MainActivity)?.openCleanScreen(btn)
+        view?.open_new_fragment?.setOnClickListener {
+            (activity as? MainActivity)?.openCleanScreen()
+        }
         return view
     }
 
