@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import kotlinx.android.synthetic.main.fragment_general.*
 import kotlinx.android.synthetic.main.fragment_general.view.*
-import org.koin.android.ext.android.inject
 import name.bagi.levente.glabrion01.R
-import name.bagi.levente.glabrion01.common.toast
 import name.bagi.levente.glabrion01.base.view.BaseFragment
+import name.bagi.levente.glabrion01.common.toast
 import name.bagi.levente.glabrion01.main.MainActivity
-import name.bagi.levente.glabrion01.main.screen.newScreen.SecondFragment
+import org.koin.android.ext.android.inject
+
 
 class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
 

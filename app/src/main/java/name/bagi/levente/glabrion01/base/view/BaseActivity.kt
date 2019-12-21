@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 
+
 abstract class BaseActivity : AppCompatActivity(), BaseViewInterface {
 
     @get:LayoutRes
@@ -12,8 +13,11 @@ abstract class BaseActivity : AppCompatActivity(), BaseViewInterface {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutResId)
-        init(savedInstanceState)
+        if (savedInstanceState == null) {
+            init(savedInstanceState)
+        }
     }
 
     protected abstract fun init(state: Bundle?)
+
 }
