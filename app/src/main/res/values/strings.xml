@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">BaseApp</string>
     <string name="new_fragment">SECOND FRAGMENT</string>
+    <string name="edit_fragment_title">EDIT FRAGMENT</string>
+    <string name="open_second_fragment_text_button">Open second fragment</string>
+    <string name="open_edit_fragment_text_button">Open edit fragment</string>
+    <string name="edit_text_hint">Enter text</string>
 </resources>
