@@ -9,6 +9,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_top"
-        android:text="@string/new_fragment"/>
-
+        android:text="@string/edit_fragment_title"/>
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:inputType="text"
+        android:background="@drawable/edit_text_states"
+        android:hint="@string/edit_text_hint"/>
 </LinearLayout>
