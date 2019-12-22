@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_general.view.*
 import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.base.view.BaseFragment
-import name.bagi.levente.glabrion01.common.toast
 import name.bagi.levente.glabrion01.main.MainActivity
 
 class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
@@ -26,7 +25,6 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
     }
 
     override fun showError() {
-        toast("Ошибка загрузки данных")
     }
 
     override fun showContent() {
