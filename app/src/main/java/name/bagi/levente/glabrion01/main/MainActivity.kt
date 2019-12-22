@@ -26,7 +26,7 @@ class MainActivity : BaseActivity(), ProgressManager {
     fun openCleanScreen() {
         val secondFragment = SecondFragment()
         supportFragmentManager.beginTransaction()
-            .replace(R.id.main_fragment_container, SecondFragment())
+            .replace(R.id.main_fragment_container, secondFragment)
             .addToBackStack(secondFragment.tag)
             .addToBackStack(null)
             .commit()
