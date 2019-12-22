@@ -10,6 +10,7 @@ import name.bagi.levente.glabrion01.common.ProgressManager
 import name.bagi.levente.glabrion01.common.gone
 import name.bagi.levente.glabrion01.common.visible
 import name.bagi.levente.glabrion01.main.screen.general.GeneralFragment
+import name.bagi.levente.glabrion01.main.screen.newScreen.EditTextFragment
 import name.bagi.levente.glabrion01.main.screen.newScreen.SecondFragment
 
 class MainActivity : BaseActivity(), ProgressManager {
@@ -28,6 +29,13 @@ class MainActivity : BaseActivity(), ProgressManager {
     fun openCleanScreen() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.main_fragment_container, SecondFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun openEditTextScreen() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_fragment_container, EditTextFragment())
             .addToBackStack(null)
             .commit()
     }

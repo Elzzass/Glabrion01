@@ -22,6 +22,9 @@ class GeneralFragment : BaseFragment(), GeneralContractInterface.View {
         view?.open_new_fragment?.setOnClickListener {
             (activity as? MainActivity)?.openCleanScreen()
         }
+        view?.open_edit_fragment?.setOnClickListener {
+            (activity as? MainActivity)?.openEditTextScreen()
+        }
         return view
     }
 
