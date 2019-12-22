@@ -1,8 +1,6 @@
 package name.bagi.levente.glabrion01.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.base.view.BaseActivity
@@ -26,12 +24,12 @@ class MainActivity : BaseActivity(), ProgressManager {
     }
 
     fun openCleanScreen() {
-        val fragment = SecondFragment()
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.main_fragment_container, fragment)
-        fragmentTransaction.addToBackStack(null)
-        fragmentTransaction.commit()
+        val secondFragment = SecondFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_fragment_container, secondFragment)
+            .addToBackStack(secondFragment.tag)
+            .addToBackStack(null)
+            .commit()
     }
 
     override fun showProgress() {

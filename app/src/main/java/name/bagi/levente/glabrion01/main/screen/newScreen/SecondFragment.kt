@@ -8,8 +8,8 @@ import name.bagi.levente.glabrion01.R
 import name.bagi.levente.glabrion01.base.view.BaseFragment
 import name.bagi.levente.glabrion01.main.screen.general.GeneralContractInterface
 
-class SecondFragment : BaseFragment(),
-    GeneralContractInterface.View {
+class SecondFragment : BaseFragment(), GeneralContractInterface.View {
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -20,6 +20,7 @@ class SecondFragment : BaseFragment(),
 
         return view
     }
+
     override fun showContent() {
     }
 
