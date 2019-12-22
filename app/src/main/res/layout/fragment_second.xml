@@ -10,4 +10,5 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_top"
         android:text="@string/new_fragment"/>
+
 </LinearLayout>
