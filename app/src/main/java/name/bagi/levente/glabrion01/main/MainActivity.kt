@@ -34,8 +34,10 @@ class MainActivity : BaseActivity(), ProgressManager {
     }
 
     fun openEditTextScreen() {
+        val editTextFragment = EditTextFragment()
         supportFragmentManager.beginTransaction()
-            .replace(R.id.main_fragment_container, EditTextFragment())
+            .replace(R.id.main_fragment_container, editTextFragment)
+            .addToBackStack(editTextFragment.tag)
             .addToBackStack(null)
             .commit()
     }
